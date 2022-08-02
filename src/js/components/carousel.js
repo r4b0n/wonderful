@@ -205,7 +205,6 @@ plan_copy.style.marginLeft = info_items.offsetLeft + 'px';
 window.addEventListener('resize', handleResize);
 
 window.onblur = function () {
-  // do some stuff after tab was changed e.g.
   graphic_one_tl.pause();
 };
 
