@@ -1,0 +1,105 @@
+header {
+  background: #9c5242;
+  width: 100%;
+  height: auto;
+  display: flex;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  @media (min-width: 576px) {
+    // (SM)
+  }
+  @media (min-width: 768px) {
+    // (MD)
+    flex-direction: row;
+  }
+  @media (min-width: 992px) {
+    // (LG)
+  }
+  @media (min-width: 1200px) {
+    // (XL)
+  }
+  @media (min-width: 1400px) {
+    // (XXL)
+  }
+  .logo {
+    display: block;
+    min-width: 38px;
+    min-height: 36px;
+    margin-left: 0;
+    @media (min-width: 768px) {
+      // (MD)
+      margin-left: 80px;
+    }
+    img {
+      object-fit: contain;
+    }
+  }
+  .nav-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 18px;
+    margin-top: 20px;
+    & > i {
+      display: block;
+      cursor: pointer;
+    }
+    @media (min-width: 768px) {
+      // (MD)
+      display: none;
+    }
+    .fa-xmark {
+      display: none;
+    }
+  }
+  nav {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-right: 0;
+    margin-top: 15px;
+    display: none;
+    @media (min-width: 768px) {
+      // (MD)
+      flex-flow: row nowrap;
+      margin-right: 80px;
+      margin-top: 0;
+      display: flex;
+    }
+    a {
+      font-weight: 400;
+      line-height: 2rem;
+      display: flex;
+      flex-direction: column;
+      &:hover {
+        border-bottom: 1px solid white;
+        margin-bottom: -1px;
+      }
+      &.selected {
+        font-weight: 700;
+      }
+    }
+    ul {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      @media (min-width: 768px) {
+        // (MD)
+        flex-flow: row nowrap;
+      }
+      li {
+        padding: 0 20px;
+      }
+    }
+    button {
+      margin-top: 10px;
+      @media (min-width: 768px) {
+        // (MD)
+        margin-top: 0;
+      }
+    }
+  }
+}
