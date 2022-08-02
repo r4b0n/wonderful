@@ -1,14 +1,59 @@
 .companies {
   position: relative;
   z-index: 11;
-  padding: 3rem 0;
+  padding: 3rem 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   @media (min-width: 992px) {
     // (SM)
     padding: 8rem 0 6rem 0;
   }
   h2 {
     color: white;
+    @media (min-width: 576px) {
+      // (SM)
+      font-size: 1.25rem;
+    }
+  }
+  ul {
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    li {
+      //max-height: 42px;
+      height: 42px;
+      width: auto;
+      margin: 1rem 3rem;
+      @media (min-width: 992px) {
+        // (SM)
+        margin: 1rem 1.5rem;
+      }
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+      &:nth-child(1) {
+        height: 36px;
+      }
+      &:nth-child(3) {
+        height: 32px;
+      }
+      &:nth-child(4) {
+        height: 31px;
+      }
+      &:nth-child(5) {
+        height: 18px;
+      }
+    }
+  }
+  .elipses {
+    position: absolute;
+    left: -30px;
+    top: 35%;
   }
 }

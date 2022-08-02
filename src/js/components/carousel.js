@@ -101,10 +101,10 @@ const animateCarousel = () => {
     .add('start', '<')
     .to(
       '.info-container',
-      { duration: 0.5, x: to_pos, ease: 'power4.in' },
+      { duration: 0.4, x: to_pos, ease: 'power4.in' },
       'start'
     )
-    .set('.info-container', { x: from_pos }, 'start+=0.6')
+    .set('.info-container', { x: from_pos }, 'start+=0.4')
     .add(() => {
       heading.innerHTML = data[cur_pos].heading;
       info.innerHTML = data[cur_pos].info;
@@ -115,11 +115,11 @@ const animateCarousel = () => {
         info_container.classList.remove('reverse');
         reverse = false;
       }
-    }, 'start+=0.6')
+    }, 'start+=0.4')
     .to(
       '.info-container',
-      { duration: 0.5, x: 0, ease: 'power4.out' },
-      'start+=0.7'
+      { duration: 0.4, x: 0, ease: 'power4.out' },
+      'start+=0.4'
     );
 };
 
@@ -160,6 +160,17 @@ graphic_one_tl
       ease: 'power1.inOut',
     },
     'start'
+  )
+  .to(
+    '.elipse-anim',
+    {
+      duration: 3,
+      rotate: 360,
+      repeat: -1,
+      transformOrigin: 'center',
+      ease: 'none',
+    },
+    'start'
   );
 
 const getRightPos = (elem) => {
@@ -190,4 +201,14 @@ const handleResize = (e) => {
 
 handleResize();
 plan_copy.style.marginLeft = info_items.offsetLeft + 'px';
+
 window.addEventListener('resize', handleResize);
+
+window.onblur = function () {
+  // do some stuff after tab was changed e.g.
+  graphic_one_tl.pause();
+};
+
+window.onfocus = function () {
+  graphic_one_tl.resume();
+};

@@ -3,10 +3,14 @@
   flex-flow: column wrap;
   justify-content: flex-end;
   align-items: center;
-  padding: 40px 20px;
-  min-height: 625px;
+  padding: 20px 20px 2.5rem 20px;
+  min-height: 650px;
   position: relative;
   z-index: 11;
+  @media (min-width: 576px) {
+    // (SM)
+    padding: 40px 20px;
+  }
   @media (min-width: 992px) {
     // (SM)
     min-height: unset;
@@ -61,12 +65,13 @@
     }
   }
   h2 {
-    margin: 4rem 0;
+    margin: 2.25rem 0;
     //margin-left: 500px;
     align-self: flex-start;
     @media (min-width: 576px) {
       // (SM)
       font-size: 1.25rem;
+      margin: 4rem 0;
     }
   }
 }
