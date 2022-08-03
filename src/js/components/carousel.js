@@ -31,6 +31,10 @@ const data = [
   },
 ];
 
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+//console.log('Mobile: ', isMobile);
+
 const heading = document.querySelector('.heading');
 const info = document.querySelector('.info');
 const info_container = document.querySelector('.info-container');
@@ -210,6 +214,8 @@ const handleResize = (e) => {
   gsap.set('.wave-top', {
     x: -getRightPos([...carousel_nav_items.children][3]),
   });
+  resetNavItemsClass('selected');
+  addNavItemClass([...carousel_nav_items.children][0], 'selected');
 };
 
 handleResize();

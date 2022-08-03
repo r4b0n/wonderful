@@ -13,6 +13,12 @@ body {
   padding: 0;
 }
 
+body,
+html,
+main {
+  overflow-x: hidden;
+}
+
 main {
   overflow: hidden;
 }
