@@ -171,6 +171,19 @@ graphic_one_tl
       ease: 'none',
     },
     'start'
+  )
+  .from(
+    '.video-popup-anim',
+    {
+      duration: 1,
+      scale: 0,
+      yoyo: true,
+      repeat: -1,
+      repeatDelay: 2,
+      transformOrigin: '30% 90%',
+      ease: 'power4.inOut',
+    },
+    'start'
   );
 
 const getRightPos = (elem) => {

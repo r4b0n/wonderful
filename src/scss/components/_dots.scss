@@ -1,10 +1,39 @@
 .dots {
   background: red;
+  opacity: 0.4;
   .dot {
     position: absolute;
     background: #fad2ca;
     width: 10px;
     height: 10px;
     border-radius: 100%;
+  }
+  &.dots-top {
+    position: absolute;
+    top: 20px;
+    left: 45%;
+    @media (min-width: 576px) {
+      // (SM)
+      left: 50%;
+    }
+    @media (min-width: 768px) {
+      // (MD)
+      left: 55%;
+    }
+    @media (min-width: 992px) {
+      // (LG)
+      left: 75%;
+    }
+    @media (min-width: 1200px) {
+      // (XL)
+    }
+    @media (min-width: 1400px) {
+      // (XXL)
+    }
+  }
+  &.dots-btm {
+    position: absolute;
+    top: 20%;
+    left: 0;
   }
 }

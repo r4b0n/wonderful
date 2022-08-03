@@ -8,11 +8,9 @@
   position: relative;
   z-index: 11;
   @media (min-width: 576px) {
-    // (SM)
     padding: 40px 20px;
   }
   @media (min-width: 992px) {
-    // (SM)
     min-height: unset;
   }
   .info-container {
@@ -22,7 +20,6 @@
     justify-content: center;
     align-items: center;
     @media (min-width: 992px) {
-      // (SM)
       flex-flow: row wrap;
       justify-content: space-evenly;
     }
@@ -30,21 +27,12 @@
       flex-flow: column-reverse wrap;
       justify-content: center;
       @media (min-width: 992px) {
-        // (SM)
         flex-flow: row-reverse wrap;
         justify-content: space-around;
       }
     }
     .info-items {
       max-width: 450px;
-      h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin: 0;
-        span {
-          color: $brand-black;
-        }
-      }
       p {
         color: $brand-black;
         font-size: 1.125rem;
@@ -62,14 +50,14 @@
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
+      height: auto;
     }
   }
   h2 {
     margin: 2.25rem 0;
-    //margin-left: 500px;
     align-self: flex-start;
     @media (min-width: 576px) {
-      // (SM)
       font-size: 1.25rem;
       margin: 4rem 0;
     }
@@ -103,7 +91,6 @@
       display: flex;
       justify-content: center;
       @media (min-width: 576px) {
-        // (SM)
         font-size: 1.25rem;
       }
       &:last-child {
